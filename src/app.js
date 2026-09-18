@@ -7,13 +7,10 @@ dotenv.config();
 
 const app = express();
 
-
 getConnection();
-
 
 app.use(cors());
 app.use(express.json());
-
 
 app.use('/api/directores', require('./routes/directorRoutes'));
 app.use('/api/generos', require('./routes/generoRoutes'));
@@ -26,5 +23,4 @@ app.listen(PORT, () => {
   console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
 
-// Al final de src/app.js
 module.exports = app;
