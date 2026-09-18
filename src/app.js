@@ -21,10 +21,10 @@ app.use('/api/medias', require('./routes/mediaRoutes'));
 app.use('/api/productoras', require('./routes/productoraRoutes'));
 app.use('/api/tipos', require('./routes/tipoRoutes'));
 
-//const PORT = process.env.PORT || 4000;
-//app.listen(PORT, () => {
-  //console.log(`Servidor corriendo en el puerto ${PORT}`);
-//});
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en el puerto ${PORT}`);
+});
 
 // Al final de src/app.js
 module.exports = app;
